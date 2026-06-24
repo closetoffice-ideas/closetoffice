@@ -28,7 +28,7 @@ const featuredProducts = [
     category: "Organization",
     price: "$51.29",
     emoji: "📌",
-    description: "30\" × 32\" steel pegboard — holds 50+ lbs of gear",
+    description: '30" × 32" steel pegboard — holds 50+ lbs of gear',
     affiliateUrl: "https://www.amazon.com/dp/B001J7JYX2?tag=closetoffice-20",
     imageUrl: "https://m.media-amazon.com/images/I/71gKMftC%2BSL._AC_SL1054_.jpg",
   },
@@ -43,57 +43,85 @@ const featuredProducts = [
   },
 ];
 
+// Cover images mapped to blog slugs
+const POST_COVERS: Record<string, string> = {
+  "ultimate-cloffice-guide": "/images/cover-ultimate-guide.jpg",
+  "best-cloffice-lighting": "/images/cover-lighting.jpg",
+  "best-fold-down-desks-cloffice": "/images/cover-fold-down-desks.jpg",
+};
+
 export default function HomePage() {
   return (
     <div className="bg-brand-cream min-h-screen">
       {/* Hero */}
       <section className="relative overflow-hidden bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-brand-sage/10 text-brand-sage-dark px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-              <Zap size={14} />
-              The #1 Cloffice Resource
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: text */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-brand-sage/10 text-brand-sage-dark px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+                <Zap size={14} />
+                The #1 Cloffice Resource
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-brand-charcoal leading-tight mb-6">
+                Your Dream Home Office{" "}
+                <span className="text-brand-sage">Was in Your Closet</span> All
+                Along
+              </h1>
+              <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-xl">
+                Step-by-step guides, curated Amazon picks, and real inspiration
+                to transform any closet into a beautiful, functional{" "}
+                <strong className="text-brand-charcoal">cloffice</strong>.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/blog/ultimate-cloffice-guide"
+                  className="inline-flex items-center justify-center gap-2 bg-brand-sage text-white px-6 py-3.5 rounded-xl font-semibold hover:bg-brand-sage-dark transition-colors text-base"
+                >
+                  Start the Ultimate Guide <ArrowRight size={18} />
+                </Link>
+                <Link
+                  href="/products"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-brand-charcoal text-brand-charcoal px-6 py-3.5 rounded-xl font-semibold hover:bg-brand-charcoal hover:text-white transition-colors text-base"
+                >
+                  Shop Amazon Picks
+                </Link>
+              </div>
+              <div className="flex items-center gap-6 mt-8">
+                {["Guides & Tutorials", "Curated Amazon Picks", "Free Inspiration"].map(
+                  (item) => (
+                    <div
+                      key={item}
+                      className="flex items-center gap-1.5 text-sm text-gray-500"
+                    >
+                      <CheckCircle size={14} className="text-brand-sage" />
+                      {item}
+                    </div>
+                  )
+                )}
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-charcoal leading-tight mb-6">
-              Your Dream Home Office{" "}
-              <span className="text-brand-sage">Was in Your Closet</span> All
-              Along
-            </h1>
-            <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-2xl">
-              Step-by-step guides, curated Amazon picks, and real inspiration
-              to transform any closet into a beautiful, functional{" "}
-              <strong className="text-brand-charcoal">cloffice</strong>.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/blog/ultimate-cloffice-guide"
-                className="inline-flex items-center justify-center gap-2 bg-brand-sage text-white px-6 py-3.5 rounded-xl font-semibold hover:bg-brand-sage-dark transition-colors text-base"
-              >
-                Start the Ultimate Guide <ArrowRight size={18} />
-              </Link>
-              <Link
-                href="/products"
-                className="inline-flex items-center justify-center gap-2 border-2 border-brand-charcoal text-brand-charcoal px-6 py-3.5 rounded-xl font-semibold hover:bg-brand-charcoal hover:text-white transition-colors text-base"
-              >
-                Shop Amazon Picks
-              </Link>
-            </div>
-            <div className="flex items-center gap-6 mt-8">
-              {["Guides & Tutorials", "Curated Amazon Picks", "Free Inspiration"].map(
-                (item) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-1.5 text-sm text-gray-500"
-                  >
-                    <CheckCircle size={14} className="text-brand-sage" />
-                    {item}
-                  </div>
-                )
-              )}
+
+            {/* Right: hero image */}
+            <div className="relative hidden lg:block">
+              <div className="rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/hero-cloffice.jpg"
+                  alt="A beautifully converted closet home office"
+                  className="w-full h-[420px] object-cover"
+                />
+              </div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-lg px-5 py-3 flex items-center gap-3">
+                <span className="text-2xl">✨</span>
+                <div>
+                  <div className="font-bold text-brand-charcoal text-sm">Closet → Cloffice</div>
+                  <div className="text-xs text-gray-500">Any size, any budget</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-brand-sage/5 to-transparent hidden lg:block" />
       </section>
 
       {/* Featured Blog Posts */}
@@ -116,29 +144,44 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {allPosts.slice(0, 3).map((post) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="group bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:border-brand-sage/30 transition-all"
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-xs font-semibold text-brand-sage bg-brand-sage/10 px-2.5 py-1 rounded-full">
-                  {post.category}
-                </span>
-                <span className="text-xs text-gray-400">{post.readTime}</span>
-              </div>
-              <h3 className="font-bold text-brand-charcoal text-lg leading-snug mb-3 group-hover:text-brand-sage transition-colors line-clamp-2">
-                {post.title}
-              </h3>
-              <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 mb-4">
-                {post.description}
-              </p>
-              <div className="flex items-center gap-1 text-brand-sage font-medium text-sm">
-                Read guide <ArrowRight size={14} />
-              </div>
-            </Link>
-          ))}
+          {allPosts.slice(0, 3).map((post) => {
+            const coverImg = POST_COVERS[post.slug];
+            return (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:border-brand-sage/30 transition-all flex flex-col"
+              >
+                {/* Cover image */}
+                {coverImg && (
+                  <div className="overflow-hidden h-44">
+                    <img
+                      src={coverImg}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs font-semibold text-brand-sage bg-brand-sage/10 px-2.5 py-1 rounded-full">
+                      {post.category}
+                    </span>
+                    <span className="text-xs text-gray-400">{post.readTime}</span>
+                  </div>
+                  <h3 className="font-bold text-brand-charcoal text-lg leading-snug mb-3 group-hover:text-brand-sage transition-colors line-clamp-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 mb-4 flex-1">
+                    {post.description}
+                  </p>
+                  <div className="flex items-center gap-1 text-brand-sage font-medium text-sm">
+                    Read guide <ArrowRight size={14} />
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         <div className="mt-6 sm:hidden text-center">
