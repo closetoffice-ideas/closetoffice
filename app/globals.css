@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 27% 97%;
+    --foreground: 210 9% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 9% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 9% 18%;
+    --primary: 114 13% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 15% 93%;
+    --secondary-foreground: 210 9% 18%;
+    --muted: 30 15% 93%;
+    --muted-foreground: 210 6% 45%;
+    --accent: 30 15% 93%;
+    --accent-foreground: 210 9% 18%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 10% 88%;
+    --input: 30 10% 88%;
+    --ring: 114 13% 54%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-brand-cream text-brand-charcoal;
+  }
+}
+
+.prose h2 {
+  @apply text-2xl font-bold text-brand-charcoal mt-10 mb-4 border-b border-gray-100 pb-2;
+}
+.prose h3 {
+  @apply text-xl font-semibold text-brand-charcoal mt-6 mb-3;
+}
+.prose p {
+  @apply text-gray-600 leading-relaxed mb-5;
+}
+.prose ul {
+  @apply list-disc pl-6 mb-5 space-y-2;
+}
+.prose ol {
+  @apply list-decimal pl-6 mb-5 space-y-2;
+}
+.prose li {
+  @apply text-gray-600 leading-relaxed;
+}
+.prose strong {
+  @apply font-semibold text-brand-charcoal;
+}
+.affiliate-btn {
+  @apply inline-flex items-center gap-2 bg-brand-terra text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-brand-terra-dark transition-colors text-sm;
+}
