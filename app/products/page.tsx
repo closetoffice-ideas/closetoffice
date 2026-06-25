@@ -228,8 +228,7 @@ export default function ProductsPage() {
             Amazon Cloffice Picks
           </h1>
           <p className="text-gray-500 text-lg max-w-2xl">
-            Every product we recommend for a complete cloffice build, organized
-            by category. All linked to Amazon for easy shopping.
+            A curated collection of Amazon finds selected for the specific needs of a closet office conversion — organized by category, with specs and sizing that actually fit a cloffice.
           </p>
         </div>
       </div>
@@ -304,7 +303,7 @@ export default function ProductsPage() {
 
                       <div className="bg-brand-sage/5 border border-brand-sage/20 rounded-lg p-3 mb-4">
                         <p className="text-xs text-gray-600">
-                          <span className="font-semibold text-brand-sage-dark">⭐ Why we love it: </span>
+                          <span className="font-semibold text-brand-sage-dark">⭐ Why it fits: </span>
                           {product.whyWeLoveIt}
                         </p>
                       </div>
