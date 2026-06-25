@@ -30,6 +30,7 @@ export default function BlogPostPage() {
 
   if (!post) {
     notFound();
+    return null;
   }
 
   const relatedPosts = allPosts.filter((p) => p.slug !== slug).slice(0, 2);
