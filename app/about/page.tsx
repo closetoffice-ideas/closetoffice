@@ -17,26 +17,26 @@ export default function AboutPage() {
 
         <div className="prose max-w-none">
           <p>
-            ClosetOfficeIdeas started with a simple frustration: expensive home office makeovers that required contractors, permits, and budgets most people don't have. Meanwhile, everyone already has a closet — often completely underutilized.
+            ClosetOfficeIdeas started with a simple observation: expensive home office makeovers require contractors, permits, and budgets most people don&apos;t have. Meanwhile, everyone already has a closet — often completely underutilized.
           </p>
 
           <p>
-            The "cloffice" concept (closet + office) went viral on Pinterest and TikTok for good reason. It's practical, affordable, and surprisingly beautiful when done right. We built this site to be the go-to resource for anyone who wants to make the conversion without spending hours researching what to buy or how to do it.
+            The &quot;cloffice&quot; concept (closet + office) went viral on Pinterest and TikTok for good reason. It&apos;s practical, affordable, and surprisingly beautiful when done right. We built this site to be a go-to resource for anyone who wants to make the conversion without spending hours figuring out where to start or what to buy.
           </p>
 
           <h2>What We Do</h2>
           <p>
-            We research, test, and curate the best Amazon products for every stage of a cloffice build — from the fold-down desk to the LED strips to the pegboard system. We write real, practical guides based on actual experience. And we share the inspiration and ideas that make people say "I could actually do this."
+            We pull together ideas, inspiration, and curated Amazon finds to help you plan your closet office conversion. Our guides walk you through each stage of a cloffice build — from layout planning to lighting to organization — and our product picks are selected based on how well they fit the specific needs of a closet workspace.
           </p>
 
-          <h2>Our Promise to You</h2>
+          <h2>How We Select Products</h2>
           <p>
-            Every product we recommend is something we'd actually put in our own cloffice. We don't recommend products just because they pay high commissions — we recommend them because they genuinely work. Our job is to help you build something you love, not to upsell you on things you don't need.
+            Every product we feature has been chosen because it fits the requirements of a closet-to-office conversion — the right dimensions, mounting options, and purpose for a compact, functional workspace. We look at ratings, reviews, and specs to find items that match what a cloffice actually needs. We don&apos;t feature products just because they pay high commissions — we curate them because they&apos;re a genuine fit for the build.
           </p>
 
           <h2>A Note on Affiliate Links</h2>
           <p>
-            Some links on this site are Amazon affiliate links. When you click through and make a purchase, we earn a small commission at no extra cost to you. This is how we're able to create free content and keep the site running. We're transparent about this on every page — read our{" "}
+            Some links on this site are Amazon affiliate links. When you click through and make a purchase, we earn a small commission at no extra cost to you. This is how we&apos;re able to create free content and keep the site running. We&apos;re transparent about this on every page — read our{" "}
             <Link href="/disclosure" className="text-brand-sage underline hover:text-brand-sage-dark">
               full affiliate disclosure here
             </Link>
@@ -54,38 +54,35 @@ export default function AboutPage() {
             href="https://pinterest.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-[#E60023] text-white px-5 py-3 rounded-xl font-semibold hover:opacity-90 transition-opacity"
+            className="flex items-center justify-center gap-2 bg-[#E60023] text-white px-5 py-3 rounded-xl font-semibold hover:bg-[#c4001d] transition-colors"
           >
             📌 Pinterest
           </a>
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/closetofficeideas"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-brand-charcoal text-white px-5 py-3 rounded-xl font-semibold hover:bg-gray-700 transition-colors"
+            className="flex items-center justify-center gap-2 bg-brand-sage text-white px-5 py-3 rounded-xl font-semibold hover:bg-brand-sage-dark transition-colors"
           >
-            📸 Instagram @ClosetOfficeIdeas
+            📸 Instagram
           </a>
           <a
             href="https://tiktok.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-black text-white px-5 py-3 rounded-xl font-semibold hover:bg-gray-900 transition-colors"
+            className="flex items-center justify-center gap-2 bg-brand-charcoal text-white px-5 py-3 rounded-xl font-semibold hover:bg-gray-800 transition-colors"
           >
-            🎵 TikTok @ClosetOfficeIdeas
+            🎵 TikTok
           </a>
         </div>
 
         <div className="mt-10 pt-8 border-t border-gray-200">
-          <p className="text-gray-500 text-sm">
-            Ready to start your cloffice build?{" "}
-            <Link
-              href="/blog/ultimate-cloffice-guide"
-              className="text-brand-sage font-semibold hover:text-brand-sage-dark inline-flex items-center gap-1"
-            >
-              Start with our Ultimate Guide <ArrowRight size={14} />
-            </Link>
-          </p>
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-brand-sage font-medium hover:text-brand-sage-dark transition-colors"
+          >
+            Browse our guides <ArrowRight size={16} />
+          </Link>
         </div>
       </div>
     </div>
