@@ -22,15 +22,15 @@ export function Footer() {
             </p>
             <div className="flex gap-3 mt-5">
               <a
-                href="https://pinterest.com"
+                href="https://pinterest.com/ClosetOfficeIdeas"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-white/20 transition-colors text-xs px-3 py-1.5 rounded-full font-medium"
               >
-                📌 Pinterest
+                🌌 Pinterest
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/closetofficeideas"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-white/20 transition-colors text-xs px-3 py-1.5 rounded-full font-medium"
