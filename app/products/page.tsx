@@ -3,32 +3,36 @@
 import Link from "next/link";
 import { ExternalLink, AlertCircle } from "lucide-react";
 
-// Main product image from each Amazon listing carousel
+// Main product image from each Amazon listing
 const ASIN_IMAGES: Record<string, string> = {
+  // Lighting
   B01L1JK0VW: "https://m.media-amazon.com/images/I/61vGvGIY3JL._AC_SL1200_.jpg",
+  B01L6W7HHE: "https://m.media-amazon.com/images/I/71+XhL5-nhL._AC_SL1200_.jpg",
   B076VNFZJG: "https://m.media-amazon.com/images/I/71FpP6myfPL._AC_SL1500_.jpg",
+  B079WQT6QM: "https://m.media-amazon.com/images/I/71uoWNwekOL._AC_SL1500_.jpg",
+  // Desks
   B07988PS8K: "https://m.media-amazon.com/images/I/71bhk1Uh1rL._AC_SL1500_.jpg",
+  B07R69WC9Y: "https://m.media-amazon.com/images/I/71dDdWzcCGL._AC_SL1500_.jpg",
+  B009U9RLOA: "https://m.media-amazon.com/images/I/41W0zKHQMHL._AC_SL1000_.jpg",
+  // Organization
   B001J7JYX2: "https://m.media-amazon.com/images/I/71gKMftC%2BSL._AC_SL1054_.jpg",
-  B09B3MJMD1: "https://m.media-amazon.com/images/I/71MttyoJxeL._AC_SL1500_.jpg",
-  B09TDJB8L2: "https://m.media-amazon.com/images/I/51C1tHksGIL._AC_SL1500_.jpg",
-  B0CSFQQVVT: "https://m.media-amazon.com/images/I/61xI72GTQoL._AC_SL1500_.jpg",
-  B001E1Y5O6: "https://m.media-amazon.com/images/I/81cK1XA%2BufL._AC_SL1500_.jpg",
   B07Q4NLWKX: "https://m.media-amazon.com/images/I/71yHEwDnmPL._AC_SL1500_.jpg",
-  B01AV6UJK8: "https://m.media-amazon.com/images/I/81beYhOpeOL._AC_SL1300_.jpg",
+  B0BKQZ9RNP: "https://m.media-amazon.com/images/I/91qpGdvYIXL._AC_SL1500_.jpg",
+  B005X9VZ70: "https://m.media-amazon.com/images/I/71klxrHsXiL._AC_SL1500_.jpg",
+  // Cable Management
+  B09TDJB8L2: "https://m.media-amazon.com/images/I/51C1tHksGIL._AC_SL1500_.jpg",
+  B08JC55TTL: "https://m.media-amazon.com/images/I/51EtlY0MK8L._AC_SL1200_.jpg",
+  B001E1Y5O6: "https://m.media-amazon.com/images/I/81cK1XA%2BufL._AC_SL1500_.jpg",
+  B0CSFQQVVT: "https://m.media-amazon.com/images/I/61xI72GTQoL._AC_SL1500_.jpg",
+  // Tech
+  B09B3MJMD1: "https://m.media-amazon.com/images/I/71MttyoJxeL._AC_SL1500_.jpg",
+  B08M94BTYC: "https://m.media-amazon.com/images/I/41xG8Yh0rlL._AC_SL1500_.jpg",
+  B07SW5G7XB: "https://m.media-amazon.com/images/I/61o7Yh4OnuL._AC_SL1200_.jpg",
 };
 
 function getAsinImage(affiliateUrl: string): string | null {
   const m = affiliateUrl.match(/\/dp\/([A-Z0-9]{10})/);
   return m ? (ASIN_IMAGES[m[1]] ?? null) : null;
-}
-
-interface Product {
-  name: string;
-  description: string;
-  price: string;
-  whyWeLoveIt: string;
-  affiliatePlaceholder: string;
-  bestFor: string;
 }
 
 const productCategories = [
@@ -47,27 +51,27 @@ const productCategories = [
         bestFor: "Under-shelf lighting",
       },
       {
-        name: "LE Linkable LED Light Bars",
-        description: "Plug-in LED bars that link together. Chain multiple bars from a single outlet. 3000K neutral white.",
+        name: "LE Linkable LED Light Bars (6-Pack)",
+        description: "14-inch plug-in LED bars that chain together. Run up to 6 bars off one outlet. 3000K neutral white.",
         price: "$30–$50",
-        whyWeLoveIt: "One plug, multiple bars. Chain them across all your shelves for perfectly even desk lighting.",
-        affiliatePlaceholder: "https://www.amazon.com/dp/B01L1JK0VW?tag=closetoffice-20",
+        whyWeLoveIt: "One plug, multiple bars. Chain them across all your shelves for perfectly even desk lighting with no extra outlets.",
+        affiliatePlaceholder: "https://www.amazon.com/dp/B01L6W7HHE?tag=closetoffice-20",
         bestFor: "Multiple shelf runs",
       },
       {
         name: "BenQ ScreenBar LED Monitor Light Bar",
-        description: "Mounts on top of your monitor. Asymmetric beam lights your desk without glare on screen. Auto-dimming.",
+        description: "Clips to top of your monitor. Asymmetric beam lights your desk without glare on screen. Auto-dimming.",
         price: "$92.65",
         whyWeLoveIt: "Zero desk space used. The no-glare beam is genuinely better than any side desk lamp for screen work.",
         affiliatePlaceholder: "https://www.amazon.com/dp/B076VNFZJG?tag=closetoffice-20",
         bestFor: "Monitor light bar",
       },
       {
-        name: "Brilliant Evolution Wireless Puck Lights",
-        description: "Battery-powered, motion-activated. Zero wiring. Instant overhead ambient light for any closet.",
+        name: "Brilliant Evolution Wireless LED Puck Lights",
+        description: "Battery-powered, motion-activated overhead pucks. 3-pack with remote. Zero wiring required.",
         price: "$20–$35",
-        whyWeLoveIt: "Best no-wiring overhead solution. Motion activation means the lights are always ready when you open the door.",
-        affiliatePlaceholder: "https://www.amazon.com/dp/B01L1JK0VW?tag=closetoffice-20",
+        whyWeLoveIt: "Best no-wiring overhead solution. Motion activation means lights are always ready when you open the closet door.",
+        affiliatePlaceholder: "https://www.amazon.com/dp/B079WQT6QM?tag=closetoffice-20",
         bestFor: "No-wiring setups",
       },
     ],
@@ -80,26 +84,26 @@ const productCategories = [
     products: [
       {
         name: "Haotian SoBuy Wall-Mount Fold-Down Desk",
-        description: "Solid wood, 110 lb capacity. Folds completely flat. Multiple wood tones available.",
-        price: "$99.99",
-        whyWeLoveIt: "Best overall fold-down desk. The solid wood construction handles dual monitors without wobble.",
+        description: "MDF + engineered wood, 66 lb capacity. Folds completely flat. Multiple finish options.",
+        price: "$75.99",
+        whyWeLoveIt: "Best overall fold-down desk. Compact profile handles a laptop and monitor without any wobble.",
         affiliatePlaceholder: "https://www.amazon.com/dp/B07988PS8K?tag=closetoffice-20",
         bestFor: "Primary desk surface",
       },
       {
         name: "VIVO Wall Mounted Fold Down Desk",
-        description: "23.6\" deep when open. White or wood finish. Sturdy steel support legs. 88 lb capacity.",
+        description: "23.6\" deep when open. Steel frame support with MDF surface. White or black finish. 88 lb capacity.",
         price: "$75–$100",
-        whyWeLoveIt: "Best value fold-down desk. Steel support legs feel rock solid. White version looks especially clean.",
-        affiliatePlaceholder: "https://www.amazon.com/dp/B07988PS8K?tag=closetoffice-20",
+        whyWeLoveIt: "Steel support legs feel rock solid. The white version looks especially clean in a modern cloffice.",
+        affiliatePlaceholder: "https://www.amazon.com/dp/B07R69WC9Y?tag=closetoffice-20",
         bestFor: "Best value pick",
       },
       {
         name: "Prepac Wall-Mounted Drop Leaf Desk",
-        description: "Built-in shelf above the desk when open. 27\" wide x 19\" deep. Engineered wood construction.",
+        description: "Built-in shelf above the desk surface when open. 27\" wide × 19\" deep. Engineered wood.",
         price: "$120–$160",
-        whyWeLoveIt: "Integrated shelf above the desk gives you desk + storage in one piece. Brilliant for small closets.",
-        affiliatePlaceholder: "https://www.amazon.com/dp/B07988PS8K?tag=closetoffice-20",
+        whyWeLoveIt: "Integrated shelf above the desk gives you desk + storage in one piece. Brilliant for tight closets.",
+        affiliatePlaceholder: "https://www.amazon.com/dp/B009U9RLOA?tag=closetoffice-20",
         bestFor: "Desk + storage combo",
       },
     ],
@@ -120,26 +124,26 @@ const productCategories = [
       },
       {
         name: "Mkono Rustic Floating Shelves (Set of 2)",
-        description: "Solid wood with metal bracket. 24\" long. Holds 33 lbs each. Rustic brown finish.",
+        description: "Solid wood with metal wire basket bracket. 17.7\" long. 4.7-star rating, 4,000+ reviews.",
         price: "$20.99",
-        whyWeLoveIt: "The rustic wood + metal combo looks expensive. Perfect for books, plants, and baskets.",
+        whyWeLoveIt: "The rustic wood + metal combo looks expensive. Perfect for books, plants, and woven baskets.",
         affiliatePlaceholder: "https://www.amazon.com/dp/B07Q4NLWKX?tag=closetoffice-20",
         bestFor: "Open shelving",
       },
       {
-        name: "Trademark Innovations Hyacinth Baskets (Set of 4)",
-        description: "Hand-woven water hyacinth over iron wire frame. 12\" cube. Folds flat for storage.",
-        price: "$65.24",
-        whyWeLoveIt: "Natural textures make open shelves look curated. Set of 4 covers every shelf scenario.",
-        affiliatePlaceholder: "https://www.amazon.com/dp/B01AV6UJK8?tag=closetoffice-20",
+        name: "Trademark Innovations Foldable Hyacinth Baskets (Set of 4)",
+        description: "Hand-woven water hyacinth over iron wire frame. 9.5\" cube, folds flat for storage. 4.8 stars.",
+        price: "$39.99",
+        whyWeLoveIt: "Natural textures make open shelves look curated. Folds flat so you can swap them out without bulk.",
+        affiliatePlaceholder: "https://www.amazon.com/dp/B0BKQZ9RNP?tag=closetoffice-20",
         bestFor: "Shelf styling + storage",
       },
       {
-        name: "DYMO LabelManager Label Maker",
-        description: "Handheld label maker. One tape cartridge included. Works on everything.",
+        name: "DYMO LabelManager 160 Label Maker",
+        description: "Handheld QWERTY label maker. One-touch smart keys, large display. One D1 tape included.",
         price: "$20–$30",
         whyWeLoveIt: "Labels are the system that makes organization maintainable. Without them, it devolves in weeks.",
-        affiliatePlaceholder: "https://www.amazon.com/dp/B01AV6UJK8?tag=closetoffice-20",
+        affiliatePlaceholder: "https://www.amazon.com/dp/B005X9VZ70?tag=closetoffice-20",
         bestFor: "Long-term maintenance",
       },
     ],
@@ -159,16 +163,16 @@ const productCategories = [
         bestFor: "Wall cable routing",
       },
       {
-        name: "Cable Management Box with Lid",
-        description: "Hides power strips and cable clutter. Matte finish. Two cord slots on each side.",
-        price: "$20–$30",
-        whyWeLoveIt: "The single best product for eliminating the under-desk cable mess. Cables in, clean box out.",
-        affiliatePlaceholder: "https://www.amazon.com/dp/B09TDJB8L2?tag=closetoffice-20",
+        name: "Naeety Cable Management Box (2-Pack)",
+        description: "Wooden-style cord organizer boxes, large + medium. Hides power strips. Two cord slots per side.",
+        price: "$20–$25",
+        whyWeLoveIt: "The single best product for eliminating under-desk cable mess. Cables in, clean wooden box out.",
+        affiliatePlaceholder: "https://www.amazon.com/dp/B08JC55TTL?tag=closetoffice-20",
         bestFor: "Under-desk clutter",
       },
       {
         name: "VELCRO Brand ONE-WRAP Cable Ties (100-pack)",
-        description: "Reusable velcro cable ties. 8-inch. Reusable — unlike zip ties that you cut once.",
+        description: "Reusable 8-inch velcro cable ties. Unlike zip ties — cut nothing, rearrange any time.",
         price: "$15.89",
         whyWeLoveIt: "Buy once, use forever. Reusable velcro means you can rearrange your setup without cutting ties.",
         affiliatePlaceholder: "https://www.amazon.com/dp/B001E1Y5O6?tag=closetoffice-20",
@@ -176,9 +180,9 @@ const productCategories = [
       },
       {
         name: "Anker 9-in-1 Desktop Charger Power Strip",
-        description: "3 AC outlets, 2 USB-A, 4 USB-C ports. 100W total. Compact desktop form factor.",
-        price: "~$55",
-        whyWeLoveIt: "USB-C ports handle modern laptops and tablets. One block, every device covered.",
+        description: "3 AC outlets, 2 USB-A, 4 USB-C ports. 100W total output. Flat plug, 5-ft cord.",
+        price: "~$40",
+        whyWeLoveIt: "USB-C ports handle modern laptops and tablets. One compact block covers every device on your desk.",
         affiliatePlaceholder: "https://www.amazon.com/dp/B0CSFQQVVT?tag=closetoffice-20",
         bestFor: "All your plugs",
       },
@@ -192,26 +196,26 @@ const productCategories = [
     products: [
       {
         name: "OImatser Monitor Stand Riser with USB Hub",
-        description: "Raises monitor to eye height. 2 USB-A ports on the side. Shelf for keyboard underneath.",
+        description: "Raises monitor to eye height. 2 USB-A ports on side. Shelf for keyboard underneath.",
         price: "$39.99",
-        whyWeLoveIt: "Solves ergonomics AND organization simultaneously. Under-monitor shelf doubles desk storage.",
+        whyWeLoveIt: "Solves ergonomics AND organization simultaneously. Under-monitor shelf doubles your desk storage.",
         affiliatePlaceholder: "https://www.amazon.com/dp/B09B3MJMD1?tag=closetoffice-20",
         bestFor: "Monitor ergonomics",
       },
       {
-        name: "BenQ ScreenBar (Monitor Light Bar)",
-        description: "Mounts on top of monitor. Asymmetric beam lights only your desk. No glare on screen. Auto-dimming.",
-        price: "$92.65",
-        whyWeLoveIt: "Zero desk space used. The no-glare beam is better than any side desk lamp for screen work.",
-        affiliatePlaceholder: "https://www.amazon.com/dp/B076VNFZJG?tag=closetoffice-20",
-        bestFor: "Screen-side task light",
+        name: "Lamicall Adjustable Laptop Stand",
+        description: "Foldable aluminum stand. 6 adjustable heights. Fits 10\"–17.3\" laptops. Open design for ventilation.",
+        price: "~$30",
+        whyWeLoveIt: "Raises your screen to eye level in seconds. Folds flat for the ultimate cloffice cleanup when you close the door.",
+        affiliatePlaceholder: "https://www.amazon.com/dp/B08M94BTYC?tag=closetoffice-20",
+        bestFor: "Laptop users",
       },
       {
         name: "IVISII 10-Inch Ring Light with Stand",
-        description: "3 color modes, 10 brightness levels. Phone mount included. Desktop stand.",
+        description: "Desktop ring light, 3 color temperatures, 10 brightness levels. Phone/camera clip included.",
         price: "$25–$40",
         whyWeLoveIt: "Non-negotiable for video calls. The ring light eliminates the overhead shadow that makes you look tired.",
-        affiliatePlaceholder: "https://www.amazon.com/dp/B076VNFZJG?tag=closetoffice-20",
+        affiliatePlaceholder: "https://www.amazon.com/dp/B07SW5G7XB?tag=closetoffice-20",
         bestFor: "Video call lighting",
       },
     ],
