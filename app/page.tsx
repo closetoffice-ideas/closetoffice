@@ -286,7 +286,7 @@ export default function HomePage() {
               📌 Pinterest
             </a>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/closetofficeideas"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-white/20 text-white border border-white/40 px-6 py-3 rounded-xl font-semibold hover:bg-white/30 transition-colors"
