@@ -709,6 +709,127 @@ export const allPosts: BlogPost[] = [
       "This complete shopping list gets you from empty closet to functional, beautiful cloffice for under $400. Every product link is on our Amazon Picks page, organized by category so you can add them to your cart in minutes. Save this post to Pinterest before you start — you'll want to reference it throughout the build. And when you're done, tag us on Instagram @ClosetOfficeIdeas — we'd love to see your build!",
     featuredProducts: [],
   },
+  {
+    slug: "cloffice-pro-setup-amazon-finds",
+    title: "6 Amazon Finds That Make Any Cloffice Look Like a Pro Setup (Under $200 Total)",
+    description:
+      "Six Amazon bestsellers that transform a basic closet office into a polished, professional workspace — including top-rated monitor arms, under-desk storage, and a pegboard wall system.",
+    date: "June 26, 2026",
+    category: "Organization",
+    readTime: "6 min read",
+    intro:
+      "There's a big difference between a cloffice that functions and one that looks like it belongs in an interior design magazine. The gap isn't square footage — it's six specific products. These Amazon bestsellers are the ones that show up in every jaw-dropping cloffice reveal: a floating monitor, hidden desk storage, and a pegboard wall that makes everything look intentional. The best part? All six together come in under $200.",
+    sections: [
+      {
+        heading: "Why These Six Products Change Everything",
+        content:
+          "The most common cloffice mistake is focusing on the big stuff — paint, shelving, a nice chair — while ignoring the details that make a workspace look polished. A monitor sitting flat on a desk adds visual clutter and raises your eye level above your screen. Cables pooling on the desk surface break the clean line. Loose supplies on shelves make the whole space feel like a storage closet again, which it was. These six products solve exactly those problems, and they're all Amazon bestsellers for a reason.",
+        bullets: [
+          "A monitor arm frees up 100% of your desk surface instantly",
+          "An under-desk drawer hides all the small stuff you reach for constantly",
+          "A pegboard wall makes supplies accessible without cluttering shelves",
+          "All six work in any closet size — reach-in, walk-in, or wardrobe",
+        ],
+      },
+      {
+        heading: "The Monitor Arm Upgrade (Pick Your Budget)",
+        content:
+          "The single most impactful upgrade in any cloffice is getting your monitor off the desk surface and onto an arm. It instantly frees up the full desk footprint, lets you tilt and swivel to your exact eye level, and gives the setup that floating screen look you see in every pro workstation photo. There are two great options on Amazon right now depending on your setup — one for a single monitor on a tight budget, one for a dual-screen power setup.",
+        products: [
+          {
+            id: "ergear-single-monitor-arm",
+            name: "ErGear Single Monitor Arm",
+            description:
+              "Adjustable single monitor arm for 13–34 inch screens, up to 19.8 lbs. Full tilt, swivel, and height adjustment with integrated C-clamp and upgraded cable management.",
+            price: "$18–$22",
+            affiliatePlaceholder:
+              "https://www.amazon.com/dp/B0FQMLC3CB?tag=closetoffice-20",
+            category: "Desks",
+            whyWeLoveIt:
+              "Best value monitor arm on Amazon. Fits 13–34 inch screens, full tilt and swivel, takes under 10 minutes to install. The price-to-quality ratio here is genuinely hard to beat — 9,700+ reviews at 4.5 stars don't lie.",
+          },
+          {
+            id: "huanuo-dual-monitor-stand",
+            name: "HUANUO FlowLift™ Dual Monitor Stand",
+            description:
+              "Fully adjustable dual monitor desk mount for 13–32 inch screens. Full motion VESA 75x75/100x100 with C-clamp and grommet base, each arm holds up to 19.8 lbs.",
+            price: "$50–$58",
+            affiliatePlaceholder:
+              "https://www.amazon.com/dp/B07T5SY43L?tag=closetoffice-20",
+            category: "Desks",
+            whyWeLoveIt:
+              "The most reviewed dual monitor stand on Amazon — over 34,000 ratings at 4.6 stars. Full articulation, a built-in cable channel, and rock-solid stability. If you run two screens, this is the one.",
+          },
+        ],
+      },
+      {
+        heading: "Hidden Storage: The Under-Desk Drawer",
+        content:
+          "One of the sneakiest storage wins in a cloffice is going under the desk. A clamp-on drawer attaches to the underside of your desk surface with no drilling required — it slides out to reveal a full tray for pens, sticky notes, headphones, chargers, and anything else you reach for constantly. On the desk surface, those items are visual clutter. Under the desk, they disappear completely.",
+        products: [
+          {
+            id: "svnnelp-under-desk-drawer",
+            name: "SVNNELP Under Desk Drawer Organizer (2-Pack)",
+            description:
+              "Clamp-on under-desk storage organizer, 2-pack with large (13x9.8x2.7 in) and medium (9.6x9.1x2.7 in) slide-out drawers. Installs with adhesive or screws, no drilling required.",
+            price: "$26.99",
+            affiliatePlaceholder:
+              "https://www.amazon.com/dp/B0CNKSDXFG?tag=closetoffice-20",
+            category: "Organization",
+            whyWeLoveIt:
+              "This is the under-desk drawer most cloffice builders don't know they need until they have one. Two sizes included — large for headphones and notebooks, small for everyday desk supplies. Installs in five minutes and completely transforms your desk surface.",
+          },
+        ],
+      },
+      {
+        heading: "The Pegboard Wall: Organization Meets Aesthetics",
+        content:
+          "The pegboard wall is the element that separates a functional cloffice from a beautiful one. Install metal pegboard panels on the back wall of your closet and suddenly every hook, basket, and accessory is on display — not hidden in a drawer, not stacked on a shelf, but arranged like an intentional design feature. It also keeps frequently used items at eye level and arm's reach. The combination below — panels plus a full accessories kit — is the setup we see in the most well-designed cloffice builds.",
+        products: [
+          {
+            id: "spampur-metal-pegboard",
+            name: "Spampur Metal Pegboard 4-Pack with 50 Hooks",
+            description:
+              "Four 16x12 inch steel pegboard panels with 50 hooks and mounting hardware included. Heavy-duty powder-coated finish, holds up to 50 lbs per panel. Compatible with standard 1/4 inch pegboard accessories.",
+            price: "$39.99",
+            affiliatePlaceholder:
+              "https://www.amazon.com/dp/B0DNZHWWLD?tag=closetoffice-20",
+            category: "Organization",
+            whyWeLoveIt:
+              "The number one bestselling pegboard on Amazon for good reason. Heavy-duty metal construction that holds real weight, and it ships with 50 hooks so you can start organizing the day it arrives. Looks significantly more premium than plastic alternatives.",
+          },
+          {
+            id: "incly-pegboard-accessories-kit",
+            name: "INCLY 100-Piece Pegboard Accessories Kit",
+            description:
+              "100-piece heavy-duty metal pegboard hook assortment with S, M, and L wire baskets. Fits all standard 1/4 inch pegboards including the Spampur panels above. Baskets hold up to 30 lbs each.",
+            price: "$22–$28",
+            affiliatePlaceholder:
+              "https://www.amazon.com/dp/B0B4JSL852?tag=closetoffice-20",
+            category: "Organization",
+            whyWeLoveIt:
+              "The add-on that takes a pegboard from practical to polished. Three basket sizes plus 11 types of hooks — snap them on, move them around, no tools required. The wire basket design keeps supplies accessible while looking intentionally styled.",
+          },
+        ],
+      },
+      {
+        heading: "The Full Pro Kit: What It Costs",
+        content:
+          "Here's the complete breakdown. Single-monitor builds come in well under $110 total. Dual-monitor setups stay under $150. You can build the entire pegboard system — panels, accessories, and under-desk drawer — for under $90 regardless of your monitor situation.",
+        bullets: [
+          "ErGear Single Monitor Arm — $18–$22",
+          "HUANUO FlowLift™ Dual Monitor Stand — $50–$58 (upgrade option)",
+          "SVNNELP Under Desk Drawer 2-Pack — $26.99",
+          "Spampur Metal Pegboard 4-Pack — $39.99",
+          "INCLY Pegboard Accessories Kit — $22–$28",
+          "Single-monitor build total: ~$108 | Dual-monitor build total: ~$148",
+        ],
+      },
+    ],
+    conclusion:
+      "Six products, one afternoon, and your cloffice goes from 'I work out of my closet' to something you're genuinely proud to open every morning. Browse all of our Amazon picks by category on our Products page, and save this post to Pinterest for when you're ready to build.",
+    featuredProducts: [],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
